@@ -1,7 +1,9 @@
-package org.styleru.the6hands;
+package org.styleru.the6hands.presentation.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import org.styleru.the6hands.R;
 
 public class MainActivity extends AppCompatActivity {
 
