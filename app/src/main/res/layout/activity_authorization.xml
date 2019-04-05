@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/authorization_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="102dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="36sp"
+        android:textColor="@color/authorizationPageText"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name_text"
+        android:fontFamily="Myriad Pro Regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/appInfo" />
+
+    <TextView
+        android:id="@+id/appInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31.5dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="18sp"
+        android:textColor="@color/authorizationPageText"
+        android:gravity="center_horizontal"
+        android:text="@string/app_description_authorization_page"
+        android:fontFamily="Roboto Regular"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <include
+        android:id="@+id/VK_authorization_button"
+        layout="@drawable/vk_authorization_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginRight="17.5dp"
+        android:layout_marginBottom="90.5dp"
+        android:onClick="onClick"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </include>
+
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="32.5dp"
+        android:textSize="16sp"
+        android:textColor="#8affffff"
+        android:letterSpacing="-0.01"
+        android:lineSpacingExtra="-2sp"
+        android:gravity="center_horizontal"
+        android:text="@string/skip"
+        android:fontFamily="Roboto Regular"
+        android:background="@drawable/transparent_skip_button"
+        app:layout_constraintTop_toTopOf="@+id/VK_authorization_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

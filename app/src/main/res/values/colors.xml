@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="authorizationPageText">#ede6d3</color>
+    <color name="loginButtonText">#b8ffffff</color>
+    <color name="skipAuthorizationButton">#a1000000</color>
+    <color name="VKcolor">#517298</color>
 </resources>

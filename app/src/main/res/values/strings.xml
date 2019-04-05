@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">6 hands</string>
+    <string name="app_name_text">SixHands</string>
+    <string name="app_description_authorization_page">"Сервис для безопасной сдачи и аренды недвижимости"</string>
+    <string name="FBauthorization">Войти с помощью Facebook</string>
+    <string name="VKauthorization">Войти с помощью Вконтакте</string>
+    <string name="skip">Пропустить</string>
 </resources>
