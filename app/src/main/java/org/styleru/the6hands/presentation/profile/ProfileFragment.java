@@ -12,7 +12,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import org.styleru.the6hands.R;
-import org.styleru.the6hands.presentation.di.App;
+import org.styleru.the6hands.di.App;
 
 import javax.inject.Inject;
 
@@ -57,6 +57,14 @@ public class ProfileFragment extends MvpAppCompatFragment implements ProfileFrag
     @Override
     public void showApartments() {
         profilePresenter.showApartments(); //adapter for recycler view
+    }
+
+    public static ProfileFragment getNewInstance() {
+        ProfileFragment fragment = new ProfileFragment();
+
+        Bundle args = new Bundle();
+
+        return fragment;
     }
 
 }

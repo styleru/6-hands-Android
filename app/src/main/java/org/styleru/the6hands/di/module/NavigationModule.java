@@ -1,4 +1,4 @@
-package org.styleru.the6hands.presentation.di.module;
+package org.styleru.the6hands.di.module;
 
 import javax.inject.Singleton;
 
