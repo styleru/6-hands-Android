@@ -3,7 +3,7 @@ package org.styleru.the6hands.presentation.authorizationPageActivity;
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 
-import org.styleru.the6hands.domain.AuthorizationPageInteractor;
+import org.styleru.the6hands.domain.interactor.AuthorizationPageInteractor;
 
 import javax.inject.Inject;
 

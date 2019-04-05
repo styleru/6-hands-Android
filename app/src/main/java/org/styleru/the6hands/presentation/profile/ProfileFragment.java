@@ -12,7 +12,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import org.styleru.the6hands.R;
-import org.styleru.the6hands.presentation.di.App;
+import org.styleru.the6hands.di.App;
 
 import javax.inject.Inject;
 

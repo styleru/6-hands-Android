@@ -3,7 +3,7 @@ package org.styleru.the6hands.presentation.profile;
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 
-import org.styleru.the6hands.presentation.domain.interactor.ApartmentInteractor;
+import org.styleru.the6hands.domain.interactor.ApartmentInteractor;
 
 import javax.inject.Inject;
 

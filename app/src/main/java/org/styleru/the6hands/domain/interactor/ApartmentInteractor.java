@@ -1,7 +1,7 @@
-package org.styleru.the6hands.presentation.domain.interactor;
+package org.styleru.the6hands.domain.interactor;
 
 
-import org.styleru.the6hands.presentation.domain.repository.Repository;
+import org.styleru.the6hands.domain.repository.Repository;
 
 import javax.inject.Inject;
 

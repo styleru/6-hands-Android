@@ -1,7 +1,6 @@
 package org.styleru.the6hands.presentation.main;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,10 +10,8 @@ import com.vk.api.sdk.VKTokenExpiredHandler;
 
 import org.styleru.the6hands.R;
 import org.styleru.the6hands.presentation.authorizationPageActivity.AuthorizationPageActivity;
-import org.styleru.the6hands.presentation.di.App;
+import org.styleru.the6hands.di.App;
 import org.styleru.the6hands.presentation.profile.ProfileFragment;
-
-import ru.terrakok.cicerone.commands.Command;
 
 public class MainActivity extends AppCompatActivity implements MainActivityView{
 
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView{
         VK.addTokenExpiredHandler(vkTokenExpiredHandler);
 
         if(!VK.isLoggedIn()){
-            startActivityForResult(new Intent(this, AuthorizationPageActivity.class), 1)
+            startActivityForResult(new Intent(this, AuthorizationPageActivity.class), 1);
         }
 
         setupNavigationBar();
