@@ -59,4 +59,12 @@ public class ProfileFragment extends MvpAppCompatFragment implements ProfileFrag
         profilePresenter.showApartments(); //adapter for recycler view
     }
 
+    public static ProfileFragment getNewInstance() {
+        ProfileFragment fragment = new ProfileFragment();
+
+        Bundle args = new Bundle();
+
+        return fragment;
+    }
+
 }
