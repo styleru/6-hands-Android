@@ -1,13 +1,14 @@
-package org.styleru.the6hands.presentation.AuthorizationActivity;
+package org.styleru.the6hands.presentation.authorizationPageActivity;
 
 import com.arellomobile.mvp.InjectViewState;
+import com.arellomobile.mvp.MvpPresenter;
 
 import org.styleru.the6hands.domain.AuthorizationPageInteractor;
 
 import javax.inject.Inject;
 
 @InjectViewState
-public class AuthorizationPagePresenter {
+public class AuthorizationPagePresenter extends MvpPresenter<AuthorizationPageView> {
 
     private AuthorizationPageInteractor authorizationPageInteractor;
 

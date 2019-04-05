@@ -2,7 +2,7 @@ package org.styleru.the6hands.di;
 
 import android.content.Context;
 
-import org.styleru.the6hands.presentation.AuthorizationActivity.AuthorizationPageActivity;
+import org.styleru.the6hands.presentation.authorizationPageActivity.AuthorizationPageActivity;
 import javax.inject.Singleton;
 import dagger.BindsInstance;
 import dagger.Component;
