@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">6 hands</string>
+    <string name="profile">Профиль</string>
+    <string name="edit_button">Изменить данные</string>
+    <string name="menu_list">Список</string>
+    <string name="menu_map">Карта</string>
+    <string name="menu_contacts">Связь</string>
+    <string name="menu_profile">Профиль</string>
 </resources>
