@@ -6,17 +6,17 @@ public class App extends Application {
 
     private static AppComponent appComponent;
 
-    public static AppComponent getAppComponent() {
-        return appComponent;
-    }
-
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
+
         appComponent = DaggerAppComponent
                 .builder()
                 .context(this)
                 .build();
     }
 
+    public static AppComponent getAppComponent() {
+        return appComponent;
+    }
 }

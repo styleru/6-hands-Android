@@ -1,4 +1,4 @@
-package org.styleru.the6hands.domain;
+package org.styleru.the6hands.domain.interactor;
 
 import javax.inject.Inject;
 
