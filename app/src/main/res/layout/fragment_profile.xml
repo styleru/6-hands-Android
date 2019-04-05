@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.profile.ProfileFragment">
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="8.5dp"
+        android:text="Анатолий"
+        android:textColor="@color/user_name_color"
+        android:fontFamily="sans-serif"
+        android:textSize="11.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:lineSpacingExtra="72.5sp"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.5dp"
+        android:layout_marginBottom="8.7dp"
+        android:text="@string/edit_button"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/user_name_color"
+        android:lineSpacingExtra="76.8sp"
+        android:textSize="7.2sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:ignore="SmallSp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="9.3dp"
+        app:layout_constraintBottom_toTopOf="@id/facebook_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"/>
+
+
+    <ImageButton
+        android:id="@+id/vk_button"
+        android:layout_width="19dp"
+        android:layout_height="19.1dp"
+        android:layout_marginLeft="8.3dp"
+        android:layout_marginTop="8.2dp"
+        android:layout_marginRight="2.9dp"
+        android:scaleType="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_button" />
+
+    <Button
+        android:id="@+id/facebook_button"
+        android:layout_width="wrap_content"
+        android:layout_height="19.1dp"
+        android:layout_marginTop="8.2dp"
+        app:layout_constraintLeft_toRightOf="@id/vk_button"
+        app:layout_constraintTop_toBottomOf="@id/edit_button" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/facebook_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>
