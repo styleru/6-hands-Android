@@ -1,4 +1,4 @@
-package org.styleru.the6hands.presentation.profile;
+package org.styleru.the6hands.presentation.map;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,16 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
-import com.arellomobile.mvp.presenter.InjectPresenter;
 
 import org.styleru.the6hands.R;
 
-public class ProfileFragment extends MvpAppCompatFragment implements ProfileView {
-
-    @InjectPresenter
-    ProfilePresenter presenter;
-
-
+public class MapFragment extends MvpAppCompatFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +20,6 @@ public class ProfileFragment extends MvpAppCompatFragment implements ProfileView
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_map, container, false);
     }
 }

@@ -18,7 +18,7 @@ public class SixHandsApp extends Application {
         cicerone = Cicerone.create();
     }
 
-    public NavigatorHolder getNavigationHolder(){
+    public NavigatorHolder getNavigatorHolder(){
         return cicerone.getNavigatorHolder();
     }
 
