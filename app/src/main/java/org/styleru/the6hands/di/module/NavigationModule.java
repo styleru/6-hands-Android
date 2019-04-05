@@ -12,7 +12,7 @@ import ru.terrakok.cicerone.Router;
 public class NavigationModule {
     private Cicerone<Router> cicerone;
 
-    NavigationModule() {
+    public NavigationModule() {
         cicerone = Cicerone.create();
     }
 

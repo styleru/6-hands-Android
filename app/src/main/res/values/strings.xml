@@ -11,4 +11,5 @@
     <string name="menu_map">Карта</string>
     <string name="menu_contacts">Связь</string>
     <string name="menu_profile">Профиль</string>
+    <integer name="com_vk_sdk_AppId">6914258</integer>
 </resources>

@@ -7,13 +7,16 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.arellomobile.mvp.MvpAppCompatActivity;
+import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
 import com.vk.api.sdk.VK;
 import com.vk.api.sdk.VKTokenExpiredHandler;
 
 import org.styleru.the6hands.R;
 import org.styleru.the6hands.di.App;
 import org.styleru.the6hands.presentation.authorizationPageActivity.AuthorizationPageActivity;
-import org.styleru.the6hands.presentation.di.App;
+import org.styleru.the6hands.di.App;
 import org.styleru.the6hands.presentation.profile.ProfileFragment;
 
 import javax.inject.Inject;
@@ -25,7 +28,16 @@ import ru.terrakok.cicerone.android.SupportFragmentNavigator;
 
 import static org.styleru.the6hands.presentation.Screens.PROFILE_SCREEN;
 
-public class MainActivity extends AppCompatActivity implements MainActivityView{
+public class MainActivity extends MvpAppCompatActivity implements MainActivityView{
+
+    @Inject
+    @InjectPresenter
+    MainActivityPresenter mainActivityPresenter;
+
+    @ProvidePresenter
+    MainActivityPresenter provideMainActivityPresenter() {
+        return mainActivityPresenter;
+    }
 
     @Inject
     NavigatorHolder navigatorHolder;
@@ -76,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView{
         VK.addTokenExpiredHandler(vkTokenExpiredHandler);
 
         if(!VK.isLoggedIn()){
-            startActivityForResult(new Intent(this, AuthorizationPageActivity.class), 1)
+            startActivityForResult(new Intent(this, AuthorizationPageActivity.class), 1);
         }
 
         setupNavigationBar();
