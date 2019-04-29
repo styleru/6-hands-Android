@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.Group;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -100,14 +101,27 @@ public class ApartmentFragment extends MvpAppCompatFragment implements Apartment
         ButterKnife.bind(this, view);
 
         // Toolbar
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+        if (appCompatActivity != null) {
+            appCompatActivity.setSupportActionBar(toolbar);
+            ActionBar actionBar = appCompatActivity.getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowTitleEnabled(false);
+            }
+        }
         setHasOptionsMenu(true);
         collapsingToolbarLayout.setTitleEnabled(false);
 
         // TODO init all fields
-        Apartment apartment = Parcels.unwrap(getArguments().getParcelable(APARTMENT_KEY));
+        Bundle args = getArguments();
+        if (args == null) {
+            throw new IllegalStateException("Arguments should not be null");
+        }
+        Apartment apartment = Parcels.unwrap(args.getParcelable(APARTMENT_KEY));
+        if (apartment == null) {
+            throw new IllegalStateException("Unable to get apartment from args");
+        }
         appartmentAddress.setText(apartment.getAddress());
         subwayColor.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#EB1B35")));
         setApartmentDescription("Description");
