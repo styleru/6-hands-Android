@@ -32,6 +32,10 @@ public class AuthPresenter extends MvpPresenter<AuthView> {
         getViewState().vkAuth();
     }
 
+    void onClickSkipAuth(){
+        router.newRootScreen(new Screens.MainScreen());
+    }
+
     void onLogin(VKAccessToken token){
         router.newRootScreen(new Screens.MainScreen());
     }
