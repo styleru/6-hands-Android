@@ -130,9 +130,11 @@ public class ApartmentFragment extends MvpAppCompatFragment implements Apartment
                 .apply(RequestOptions.circleCropTransform())
                 .into(ownerAvatar);
 
-        if (apartment.getFacilities().isEmpty()) group.setVisibility(View.GONE);
-        else recyclerView.setAdapter(new FacilitiesAdapter(apartment.getFacilities()));
-
+        if (apartment.getFacilities().isEmpty()) {
+            group.setVisibility(View.GONE);
+        } else {
+            recyclerView.setAdapter(new FacilitiesAdapter(apartment.getFacilities()));
+        }
         return view;
     }
 
